@@ -11,7 +11,7 @@ public class Main {
         Set<Ingredient> requirements=new HashSet<>();
         Set<Ingredient> available=new HashSet<>();
 
-        System.out.println("\nCase 1");
+        System.out.println("\nCase 1: Exact matching");
         BuildCase1(available,requirements);
         Set<Ingredient> comp=FmFmThreeTierComposition.RequirementsDriven(available,requirements);
         System.out.println("result = "+comp);
@@ -19,7 +19,7 @@ public class Main {
 
         available=new HashSet<>();
         FmFmKnowledgeBase kb = new FmFmKnowledgeBase();
-        System.out.println("\nCase 2a");
+        System.out.println("\nCase 2a: Simple substitution");
         BuildCase2a(available,requirements,kb);
         comp=FmFmThreeTierComposition.Alternatives(available,requirements,kb);
         System.out.println("result = "+comp);
@@ -27,7 +27,7 @@ public class Main {
 
         available=new HashSet<>();
         kb = new FmFmKnowledgeBase();
-        System.out.println("\nCase 2b");
+        System.out.println("\nCase 2b: substitution with conflict");
         BuildCase2b(available,requirements,kb);
         comp=FmFmThreeTierComposition.Alternatives(available,requirements,kb);
         System.out.println("result = "+comp);
@@ -35,7 +35,7 @@ public class Main {
 
         available=new HashSet<>();
         kb = new FmFmKnowledgeBase();
-        System.out.println("\nCase 3a");
+        System.out.println("\nCase 3a: changing requirements/recipe");
         BuildCase3a(available,requirements,kb);
         comp=FmFmThreeTierComposition.Alternatives(available,requirements,kb);
         System.out.println("result Alternatives = "+comp);
@@ -45,7 +45,7 @@ public class Main {
 
         available=new HashSet<>();
         kb = new FmFmKnowledgeBase();
-        System.out.println("\nCase 3b");
+        System.out.println("\nCase 3b: changing requirements and substitute");
         BuildCase3b(available,requirements,kb);
         comp=FmFmThreeTierComposition.Alternatives(available,requirements,kb);
         System.out.println("result Alternatives = "+comp);
