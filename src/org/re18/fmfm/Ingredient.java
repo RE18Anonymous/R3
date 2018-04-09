@@ -17,4 +17,13 @@ public class Ingredient implements Component {
         Ingredient t = (Ingredient) o;
         return this.name == t.name;
     }
+
+    @Override
+    public String toString() {
+        return name;
+    }
+
+    public String getName() {
+        return name;
+    }
 }
