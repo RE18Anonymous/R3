@@ -45,7 +45,7 @@ public class Main {
 
         available=new HashSet<>();
         kb = new FmFmKnowledgeBase();
-        System.out.println("\nCase 3b: changing requirements and substitute");
+        System.out.println("\nCase 3b: changing requirements and");
         BuildCase3b(available,requirements,kb);
         comp=FmFmThreeTierComposition.Alternatives(available,requirements,kb);
         System.out.println("result Alternatives = "+comp);
